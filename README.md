@@ -95,7 +95,7 @@ tomcat‐7.0.57 ‐Djava.io.tmpdir=/tmp/apache‐tomcat‐7.0.57/temp
 ### JVM的内存模型
 #### jdk1.7的堆内存模型
 * ds
-![](images/jdk7.png)
+![](./images/jdk7.png)
 
 
 
