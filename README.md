@@ -71,3 +71,48 @@ itcast
     * eg:[root@node01 test]# java ‐XX:+PrintFlagsFinal ‐version
 #### 查看正在运行的java进程的参数
 * 如果想要查看正在运行的jvm就需要借助于jinfo命令查看。
+```jshelllanguage
+[root@node01 bin]# jinfo ‐flags 6219
+Attaching to process ID 6219, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.141‐b15
+Non‐default VM flags: ‐XX:CICompilerCount=2 ‐XX:InitialHeapSize=31457280
+‐XX:MaxHeapSize=488636416 ‐XX:MaxNewSize=162529280 ‐
+XX:MinHeapDeltaBytes=524288 ‐XX:NewSize=10485760 ‐XX:OldSize=20971520 ‐
+XX:+UseCompressedClassPointers ‐XX:+UseCompressedOops ‐
+XX:+UseFastUnorderedTimeStamps ‐XX:+UseParallelGC
+Command line: ‐Djava.util.logging.config.file=/tmp/apache‐tomcat‐
+7.0.57/conf/logging.properties ‐
+Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager ‐
+Djava.endorsed.dirs=/tmp/apache‐tomcat‐7.0.57/endorsed ‐
+Dcatalina.base=/tmp/apache‐tomcat‐7.0.57 ‐Dcatalina.home=/tmp/apache‐
+tomcat‐7.0.57 ‐Djava.io.tmpdir=/tmp/apache‐tomcat‐7.0.57/temp
+#查看某一参数的值，用法：jinfo ‐flag <参数名> <进程id>
+[root@node01 bin]# jinfo ‐flag MaxHeapSize 6219
+‐XX:MaxHeapSize=488636416
+```
+### JVM的内存模型
+#### jdk1.7的堆内存模型
+![](image/1.7.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
