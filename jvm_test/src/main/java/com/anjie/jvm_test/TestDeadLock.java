@@ -13,7 +13,6 @@ public class TestDeadLock {
     }
 
     private static class Thread1 implements Runnable{
-        @Override
         public void run() {
             synchronized (obj1){
                 System.out.println("Thread1 拿到了 obj1 的锁！");
@@ -33,7 +32,6 @@ public class TestDeadLock {
     }
 
     private static class Thread2 implements Runnable{
-        @Override
         public void run() {
             synchronized (obj2){
                 System.out.println("Thread2 拿到了 obj2 的锁！");
